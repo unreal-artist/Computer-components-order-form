@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <h1 class="header">Computer Components</h1>  
+    </header>
+    <br>
+    <main>
+        <div id="app">
+
+        <section>
+
+
+            <article class="component">
+                <h4 class="component-name">Mouse</h4>
+                <img  class="product" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTsBspYb-9OcG2i4DV1Rd8_ir-7Q0p6jwpPHzO9RvBgDceNbesj6fZh1Bhp0qapkRLdqg4mCjeSY9_viEpqdtPnNGBQmxhx8XbE1F7xi410RO8XMQvAOdMwXA" alt="computer mouse">
+                <div class="row">
+                    <label>Price: </label>
+                    $79.99
+                </div>
+                <div class="row">
+                    <label>Quantity: </label>
+                    <input class="ammount" type="number" min="0" max="20" v-model.number="order.mouse">    
+                </div> 
+
+            </article>
+
+            <article class="component">
+                <h4 class="component-name">Monitor</h4>
+                <img  class="product" src="https://cyberport.scene7.com/is/image/cyberport/200608090814300601900002I?$Zoom_1000$" alt="Monitor">
+                <div class="row">
+                    <label>Price: </label>
+                    $515.09
+                </div>
+                <div class="row">
+                    <label>Quantity: </label>
+                    <input class="ammount" type="number" min="0" max="20"  v-model.number="order.monitor">    
+                </div> 
+            </article>
+
+            <article class="component">
+                <h4 class="component-name">Keyboard</h4>
+                <img  class="product" src="https://thermaltake.azureedge.net/pub/media/catalog/product/cache/6bf0ed99c663954fafc930039201ed07/l/2/l20gt01_1.jpg" alt="Keyboard">
+                <div class="row">
+                    <label>Price: </label>
+                    $192.30
+                </div>
+                <div class="row">
+                    <label>Quantity: </label>
+                    <input class="ammount" type="number" min="0" max="20" v-model.number="order.keyboard">    
+                </div> 
+            </article>
+
+            <article class="component">
+                <h4 class="component-name">CPU</h4>
+                <img  class="product" src="https://m.media-amazon.com/images/I/51ZMybQM3cL._AC_SS450_.jpg" alt="Intel CPU">
+                <div class="row">
+                    <label>Price: </label>
+                    $86.99
+                </div>
+                <div class="row">
+                    <label>Quantity: </label>
+                    <input class="ammount" type="number" min="0" max="20" v-model.number="order.cpu">    
+                </div> 
+            </article>
+            <br>
+
+            <article class="component">
+                <h4 class="component-name">RAM</h4>
+                <img  class="product" src="https://static3.caseking.de/media/image/thumbnail/mecs-506_mecs_506_02_800x800.jpg" alt="RAM">
+                <div class="row">
+                    <label>Price: </label>
+                    $158.99
+                </div>
+                <div class="row">
+                    <label>Quantity: </label>
+                    <input class="ammount" type="number" min="0" max="20" v-model.number="order.ram">    
+                </div> 
+            </article>
+
+            <article class="component">
+                <h4 class="component-name">Motherboard</h4>
+                <img  class="product" src="https://static3.caseking.de/media/image/thumbnail/mbmc-385_mbmc_385_02_800x800.jpg" alt="Motherboard">
+                <div class="row">
+                    <label>Price: </label>
+                    $129.89
+                </div>
+                <div class="row">
+                    <label>Quantity: </label>
+                    <input class="ammount" type="number" min="0" max="20" v-model.number="order.motherboard">    
+                </div> 
+            </article>
+
+            <article class="component">
+                <h4 class="component-name">Hard Drive</h4>
+                <img  class="product" src="https://cdn.idealo.com/folder/Product/201486/4/201486438/s1_produktbild_mobil_8/seagate-firecuda-gaming-hard-drive-1tb.jpg" alt="Hard Drive">
+                <div class="row">
+                    <label>Price: </label>
+                    $59.99
+                </div>
+                <div class="row">
+                    <label>Quantity: </label>
+                    <input class="ammount" type="number" min="0" max="20" v-model.number="order.hardDrive">    
+                </div>  
+            </article>
+
+            <article class="component">
+                <h4 class="component-name">Graphics Card</h4>
+                <img  class="product" src="https://static3.caseking.de/media/image/thumbnail/gcmc-315_gcmc_315_01_800x800.jpg" alt="Graphics Card">
+                <div class="row" class="price">
+                    <label>Price: </label>
+                    $378.99
+                </div>
+                <div class="row">
+                    <label>Quantity: </label>
+                    <input class="ammount" type="number" min="0" max="20" v-model.number="order.graphicsCard">    
+                </div>  
+            </article>
+        </section>
+
+        <section class="cart"> 
+            <h3>Your order: </h3>
+            <div class="orderedComponents">
+            <p v-if="order.mouse != 0">Mouse: {{order.mouse}}</p>           
+            <p v-if="order.monitor != 0">Monitor: {{order.monitor}}</p>
+            <p v-if="order.keyboard != 0">Keyboard: {{order.keyboard}}</p>
+            <p v-if="order.cpu != 0">CPU: {{order.cpu}}</p>
+            <p v-if="order.ram != 0">RAM: {{order.ram}}</p>
+            <p v-if="order.motherboard != 0">Motherboard: {{order.motherboard}}</p>
+            <p v-if="order.hardDrive != 0">Hard drive: {{order.hardDrive}}</p>
+            <p v-if="order.graphicsCard != 0">Graphics Card: {{order.graphicsCard}}</p> 
+            <hr class="hr1">
+            <p class="totalPrice">Total price: </p><p class="price">${{price}}</p>
+        </div>           
+        </section>
+
+
+
+        <section class="orderForm">
+            <h3>Order form</h3>
+
+            <form @submit.prevent="handleSubmit(type,input)" method="GET"> 
+                <label class="form-label" for="name">Last name</label>
+                <input type="text" placeholder="Parker" v-model="customerInfo.name" required>
+                <br>
+
+                <label class="form-label" for="fname">First name</label>
+                <input type="text" placeholder="Tom" v-model="customerInfo.firstname" required>
+                <br>
+
+                <label class="form-label" for="email">Email</label>
+                <input type="text" placeholder="tom.parker@example.com" v-model="customerInfo.email" required>
+                <br>
+
+                <label class="form-label" for="phonenumber">Phonenumber</label>
+                <input type="text" placeholder="0155 47390209" min="10" v-model="customerInfo.phonenumber" required>
+                <br>
+
+                <label class="form-label" for="address"> Address</label>
+                <input type="text" placeholder="Cora-Berliner-Straße 1" v-model="customerInfo.address" required>
+                <br>
+
+                <label class="form-label" for="city">City</label>
+                <input type="text" placeholder="Berlin" v-model="customerInfo.city" required>
+                <br>
+
+                <label class="form-label" for="state">State</label>
+                <input type="text" placeholder="Brandenburg" v-model="customerInfo.state" required>
+                <br>
+
+                <label class="form-label" for="postcode">Postcode</label>
+                <input type="text" placeholder="10117" min="5" max="5" v-model="customerInfo.postcode" required>
+                <br>
+                <input type="hidden" name="cart" value="{{order}}"> 
+                
+                <input type="checkbox" required>
+                <label class="form-label" for="terms">Accept terms and conditions</label>
+                <br>
+
+                <button type="Submit" @click="submitted =!submitted" class="submit">Place Order</button>
+                <button type="reset" @click="reset()" class="reset">Reset</button> 
+
+            </form>  
+            <h4 v-if="submitted"> Thank you for your order.</h4> 
+            <h4 v-if="submitted"> We will reach out to you regarding payment and shipping details.</h4>  
+        </section>
+        <footer>
+            <br>
+            Computer Components GmBh
+            <br>
+            Berlin, Germany
+            <br>
+            Contact: computer.components@gmail.com
+        </footer>
+
+
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        let app = Vue.createApp({
+            data: function() {
+                return {
+                    order: {
+                        mouse: 0,
+                        monitor: 0,
+                        keyboard: 0,
+                        cpu: 0,
+                        ram: 0,
+                        motherboard: 0,
+                        hardDrive: 0,
+                        graphicsCard: 0,
+                    },
+
+                    customerInfo: {
+                        name: '',
+                        firstname: '',
+                        email: '',
+                        phonenumber: '',
+                        address: '',
+                        city:'',
+                        state:'',
+                        postcode:'',
+                    },
+                    submitted: false
+                }
+            },
+            
+            methods:{
+
+                addToOrder(type, quantity){
+                    //receive type and number of items
+                    this.order[type] = quantity 
+                    console.log(this.order)
+               },   
+               handleSubmit(type, quantity){
+                   this.customerInfo[type] = quantity
+                   console.log('New order submitted: ')
+                    console.log('Customer: ', this.customerInfo)
+                    console.log('Order:', this.order)
+                }, 
+
+
+                reset(){
+                    this.order.mouse = 0
+                    this.order.monitor= 0
+                    this.order.keyboard= 0
+                    this.order.cpu= 0
+                    this.order.ram= 0
+                    this.order.motherboard= 0
+                    this.order.hardDrive= 0
+                    this.order.graphicsCard= 0
+                },           
+
+            },
+            computed: {
+                price: function() {
+                    return this.order.mouse * 79.99 + this.order.monitor *515.09
+                    + this.order.keyboard * 192.30 + this.order.cpu * 86.99
+                    + this.order.ram * 158.99 + this.order.motherboard * 129.89
+                    + this.order.hardDrive * 59.99 + this.order.graphicsCard * 378.99
+                }
+            }
+
+        })
+        app.mount('#app')
+    </script>
+   
+</body>
+</html>

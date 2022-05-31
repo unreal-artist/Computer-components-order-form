@@ -1,0 +1,137 @@
+body{
+    background-color:rgb(221, 231, 231);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    min-height: 200px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://www.techadvisor.com/cmsdata/features/3512328/check_computer_specification_thumb800.jpg);
+    
+}
+.header{
+    color: azure;
+    text-align: center;
+    padding-top: 55px;
+    font-size:  400%;
+}
+
+main{
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.component{
+    width: 193px;
+    height: 250px;
+    display:inline-block;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    margin-right: 7px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(253, 253, 253);
+
+}
+.component-name{
+    background-color: rgb(156, 176, 177);
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    letter-spacing: 0.75px;
+    font-weight: bold;
+
+}
+.ammount{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+.product{
+    max-height: 125px;
+    max-width: 125px;
+    margin-left: 33px;
+    margin-right: 33px;   
+}
+
+.row{
+    text-align: center;
+    margin-bottom: 2px;
+}
+.add{
+    text-align: center;
+    width: 90px;
+    margin-top: 7px;
+    margin-left: 51px;
+    margin-right: 51px;
+}
+
+form{
+    background: white;
+    text-align: left;
+    max-width: 380px;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+.form-label{
+    display: inline-block;
+    margin: 10px 0 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+input{
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+input[type="checkbox"]{
+    display: inline-block;
+    width: 16px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 2px;
+}
+
+button {
+    background: #0b6dff;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.cart{
+    width: 300px;
+    display: inline-block;
+    background: white;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.totalPrice, .price{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+.totalPrice{
+    text-align: left;
+    padding-right: 10px;
+    font-weight: bold;    
+}
+footer{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
