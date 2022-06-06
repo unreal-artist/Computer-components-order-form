@@ -16,8 +16,7 @@
         <div id="app">
 
         <section>
-
-
+<!-- Contains all articles that can be ordered, includes buttons for each to set the desired amount -->
             <article class="component">
                 <h4 class="component-name">Mouse</h4>
                 <img  class="product" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTsBspYb-9OcG2i4DV1Rd8_ir-7Q0p6jwpPHzO9RvBgDceNbesj6fZh1Bhp0qapkRLdqg4mCjeSY9_viEpqdtPnNGBQmxhx8XbE1F7xi410RO8XMQvAOdMwXA" alt="computer mouse">
@@ -124,7 +123,8 @@
                 </div>  
             </article>
         </section>
-
+            
+<!-- displays the items of the order and the total price -->
         <section class="cart"> 
             <h3>Your order: </h3>
             <div class="orderedComponents">
@@ -142,7 +142,7 @@
         </section>
 
 
-
+<!-- the form where the customer has to input all the required information -->
         <section class="orderForm">
             <h3>Order form</h3>
 
@@ -204,6 +204,7 @@
         </div>
     </main>
 
+    <!-- functionalities of the individual elements, defined in JavaScript -->
     <script src="https://unpkg.com/vue@next"></script>
     <script>
         let app = Vue.createApp({
